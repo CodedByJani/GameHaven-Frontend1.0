@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GameHaven - Tips</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="library.html">Library</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="tips.html">Tips</a>
+  <a href="friends.html">Social Hub</a>
+</nav>
+
+<!-- Logout button as a floating top-right element -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+<!-- Page content container -->
+<div class="container">
+  <h1 class="page-title">Game Tips / Personal Notes</h1>
+
+  <!-- Select Game -->
+  <div class="card">
+    <h2>Select Game</h2>
+    <select id="selectGameForTip">
+      <option value="">Select a game</option>
+    </select>
+  </div>
+
+  <!-- Filter Tips -->
+  <div class="card">
+    <h2>Filter Tips by Tag</h2>
+    <input type="text" id="tipTagFilter" placeholder="Enter tag">
+    <button id="applyTipFilter" class="primary-btn">Filter</button>
+  </div>
+
+  <!-- Tips List -->
+  <div class="card">
+    <h2>All Tips</h2>
+    <ul id="tipsList"></ul>
+  </div>
+
+  <!-- Add Tip -->
+  <div class="card">
+    <h2>Add Tip</h2>
+    <form id="tipForm">
+      <textarea id="tipText" placeholder="Your tip" required></textarea>
+      <input type="text" id="tipTags" placeholder="Tags (comma-separated)">
+      <button type="submit" class="primary-btn">Add Tip</button>
+    </form>
+  </div>
+</div>
+
+<!-- Include auth.js first -->
+<script src="auth.js"></script>
+<script>
+  if (typeof checkLogin === 'function') checkLogin();
+</script>
+
+<script src="tips.js"></script>
+</body>
+</html>

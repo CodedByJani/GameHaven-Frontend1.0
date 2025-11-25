@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GameHaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+  <!-- Logout button as a floating top-right element -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+  <div class="home-container">
+    <h1 class="home-title">GameHaven</h1>
+    <img src="assets/Logo.png" alt="GameHaven Logo" class="home-logo">
+
+    <!-- Navigation as cards -->
+    <div class="nav-cards">
+      <a href="library.html" class="nav-card">🎮 Game Library</a>
+      <a href="reviews.html" class="nav-card">📝 Reviews</a>
+      <a href="tips.html" class="nav-card">💡 Tips / Notes</a>
+      <a href="friends.html" class="nav-card">🤝 Social Hub</a>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script>
+    if (typeof checkLogin === 'function') checkLogin();
+  </script>
+</body>
+</html>

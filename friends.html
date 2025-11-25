@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GameHaven - Social Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="library.html">Library</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="tips.html">Tips</a>
+  <a href="friends.html">Social Hub</a>
+</nav>
+
+<!-- Logout button as a floating top-right element -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+<!-- Page container -->
+<div class="container">
+  <h1 class="page-title">Social Hub</h1>
+
+  <!-- Create Post -->
+  <div class="card">
+    <h2>Create a Post</h2>
+    <form id="postForm">
+      <textarea id="postText" placeholder="Write a post..." required></textarea>
+      <button type="submit" class="primary-btn">Post</button>
+    </form>
+  </div>
+
+  <!-- Posts List -->
+  <div class="card">
+    <h2>Posts</h2>
+    <ul id="postsList"></ul>
+  </div>
+</div>
+
+<!-- Include auth.js first -->
+<script src="auth.js"></script>
+<script>
+  if (typeof checkLogin === 'function') checkLogin();
+</script>
+
+<!-- Include friends.js -->
+<script src="friends.js"></script>
+</body>
+</html>

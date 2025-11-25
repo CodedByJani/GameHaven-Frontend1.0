@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GameHaven - Reviews</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="library.html">Library</a>
+  <a href="reviews.html">Reviews</a>
+  <a href="tips.html">Tips</a>
+  <a href="friends.html">Social Hub</a>
+</nav>
+
+<!-- Logout button as a floating top-right element -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+<!-- Page content container -->
+<div class="container">
+  <h1 class="page-title">Reviews</h1>
+
+  <!-- Select Game -->
+  <div class="card">
+    <h2>Select Game</h2>
+    <select id="selectGameForReview">
+      <option value="">Select a game</option>
+    </select>
+  </div>
+
+  <!-- Selected Game Reviews Card -->
+  <div class="card game-reviews-card">
+    <h2>Reviews for Selected Game</h2>
+    <ul id="reviewsList"></ul>
+    <p id="averageRating"></p>
+
+    <h3>Add Review</h3>
+    <form id="reviewForm">
+      <select id="rating">
+        <option value="1">1 ⭐</option>
+        <option value="2">2 ⭐</option>
+        <option value="3">3 ⭐</option>
+        <option value="4">4 ⭐</option>
+        <option value="5">5 ⭐</option>
+        <option value="6">6 ⭐</option>
+        <option value="7">7 ⭐</option>
+        <option value="8">8 ⭐</option>
+        <option value="9">9 ⭐</option>
+        <option value="10">10 ⭐</option>
+      </select>
+      <input type="text" id="comment" placeholder="Comment">
+      <button type="submit" class="primary-btn">Submit Review</button>
+    </form>
+  </div>
+</div>
+
+<!-- Include auth.js first -->
+<script src="auth.js"></script>
+<script>
+  if (typeof checkLogin === 'function') checkLogin();
+</script>
+
+<script src="reviews.js"></script>
+</body>
+</html>

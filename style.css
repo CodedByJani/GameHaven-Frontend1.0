@@ -1,0 +1,455 @@
+/* =========================================================
+   ORIGINAL STYLE.CSS  (YOUR OLD CODE, UNCHANGED)
+========================================================= */
+
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SITE-WIDE COLORS */
+:root {
+  --purple: #7b3cff;
+  --purple-dark: #5a2ec0;
+  --purple-light: #d5c4ff;
+  --text-dark: #222;
+  --background: #f5f5f7;
+  --card-bg: #ffffff;
+}
+
+/* BASE BODY STYLE */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+/* HOME PAGE CONTAINER */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* MAIN TITLE */
+.home-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--purple);
+  margin-bottom: 20px;
+}
+
+/* LOGO */
+.home-logo {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: var(--purple-dark);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.logout-btn:hover {
+  background: var(--purple);
+  transform: translateY(-2px);
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.nav-links a {
+  display: block;
+  background: white;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 15px 20px;
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  background: var(--purple);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 3rem;
+  }
+  .home-logo {
+    width: 150px;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+}
+
+/* ----------- LOGIN/SIGNUP PAGE ----------- */
+.auth-page {
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  padding: 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+}
+
+.auth-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* Card */
+.auth-card {
+  background: var(--card-bg);
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.auth-card h2 {
+  color: var(--purple-dark);
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid var(--purple-light);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--purple-dark);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s ease;
+}
+
+.auth-btn:hover {
+  background: var(--purple);
+}
+
+.auth-error {
+  color: red;
+  font-size: 0.9rem;
+  min-height: 18px;
+  margin-bottom: 5px;
+}
+
+/* =========================================================
+   NEW SECTION FOR LIBRARY.HTML + OTHER PAGES
+========================================================= */
+
+/* ===============================
+   NEW — BEAUTIFUL PAGE NAVIGATION
+=============================== */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 25px;
+  background: var(--purple-dark);
+}
+
+nav a {
+  background: white;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 12px;
+  border: 2px solid var(--purple);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+nav a:hover {
+  background: var(--purple);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* =============================== */
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 30px 0;
+  color: var(--purple-dark);
+}
+
+/* MAIN CONTENT CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* SECTION CARDS */
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+/* INPUTS + SELECTS */
+.card input,
+.card select,
+.card textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--purple-light);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* BUTTONS */
+.primary-btn {
+  background: var(--purple-dark);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: var(--purple);
+}
+
+/* GAME LIST GRID */
+.games-grid {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.games-grid li {
+  background: white;
+  border: 2px solid var(--purple-light);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.games-grid li h3 {
+  color: var(--purple-dark);
+  margin-bottom: 8px;
+}
+
+/* Buttons inside game cards */
+.game-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--purple);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.game-btn:hover {
+  background: var(--purple-dark);
+}
+
+/* =========================================================
+   REVIEWS PAGE
+========================================================= */
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 30px 0;
+  color: var(--purple-dark);
+}
+
+/* Game selection dropdown */
+#selectGameForReview {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--purple-light);
+  width: 250px;
+}
+
+/* Game reviews card */
+.game-reviews-card {
+  background: var(--card-bg);
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  border: 1px solid var(--purple-light);
+}
+
+/* Review list */
+#reviewsList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+#reviewsList li {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+  font-size: 1rem;
+}
+
+/* Average rating */
+#averageRating {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Add review form */
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#reviewForm select,
+#reviewForm input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--purple-light);
+}
+
+#reviewForm button {
+  background: var(--purple-dark);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+#reviewForm button:hover {
+  background: var(--purple);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .game-reviews-card {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  #selectGameForReview {
+    width: 200px;
+  }
+}
+
+/* Home page nav cards */
+.nav-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.nav-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--purple-dark);
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  width: 200px;
+  height: 80px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.nav-card:hover {
+  background: var(--purple);
+  transform: translateY(-3px);
+}

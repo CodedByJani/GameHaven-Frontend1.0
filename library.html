@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Game Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+    <a href="library.html" class="active">Library</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="tips.html">Tips</a>
+    <a href="friends.html">Social Hub</a>
+  </div>
+  <!-- Logout button as a floating top-right element -->
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</nav>
+
+<div class="container">
+
+  <h1 class="page-title">Game Library</h1>
+
+  <section class="card">
+    <h2>Add New Game</h2>
+    <form id="gameForm" class="form-grid">
+
+      <input type="text" id="name" placeholder="Game Name" required>
+
+      <select id="type">
+        <option value="">Select Type</option>
+        <option value="RPG">RPG</option>
+        <option value="FPS">FPS</option>
+        <option value="Strategy">Strategy</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <input type="text" id="customType" placeholder="Custom Type" style="display:none;">
+
+      <select id="platform">
+        <option value="">Select Platform</option>
+        <option value="PC">PC</option>
+        <option value="PS5">PS5</option>
+        <option value="Switch">Switch</option>
+        <option value="Xbox">Xbox</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <input type="text" id="customPlatform" placeholder="Custom Platform" style="display:none;">
+
+      <input type="text" id="description" placeholder="Description">
+
+      <select id="status">
+        <option value="want_to_play">Want to Play</option>
+        <option value="playing">Playing</option>
+        <option value="played">Played</option>
+      </select>
+
+      <button type="submit" class="primary-btn">Add Game</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Filter Games</h2>
+    <div class="form-grid">
+      <select id="filterType"><option value="">All Types</option></select>
+      <select id="filterPlatform"><option value="">All Platforms</option></select>
+
+      <select id="filterStatus">
+        <option value="">All Statuses</option>
+        <option value="want_to_play">Want to Play</option>
+        <option value="playing">Playing</option>
+        <option value="played">Played</option>
+      </select>
+
+      <button id="applyFilters" class="secondary-btn">Apply Filters</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Sort Games</h2>
+    <select id="sortGames" class="full-width-select">
+      <option value="">-- Select Sort --</option>
+      <option value="name_asc">Name A → Z</option>
+      <option value="name_desc">Name Z → A</option>
+      <option value="status">Status (Want → Playing → Played)</option>
+      <option value="type_asc">Type A → Z</option>
+      <option value="platform_asc">Platform A → Z</option>
+    </select>
+  </section>
+
+  <section class="card">
+    <h2>All Games</h2>
+    <ul id="gamesList" class="games-grid"></ul>
+  </section>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="library.js"></script>
+</body>
+</html>
