@@ -1,5 +1,5 @@
 /* =========================================================
-   ORIGINAL STYLE.CSS  (YOUR OLD CODE, UNCHANGED)
+   ORIGINAL STYLE.CSS
 ========================================================= */
 
 /* GENERAL RESET */
@@ -196,13 +196,6 @@ body {
   margin-bottom: 5px;
 }
 
-/* =========================================================
-   NEW SECTION FOR LIBRARY.HTML + OTHER PAGES
-========================================================= */
-
-/* ===============================
-   NEW — BEAUTIFUL PAGE NAVIGATION
-=============================== */
 nav {
   display: flex;
   justify-content: center;
